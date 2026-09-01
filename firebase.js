@@ -1,0 +1,5 @@
+import { initializeApp } from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-app.js';
+import { getAuth, onAuthStateChanged, signInWithEmailAndPassword, createUserWithEmailAndPassword, signOut } from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-auth.js';
+import { getFirestore, collection, doc, setDoc, deleteDoc, onSnapshot, getDoc, serverTimestamp } from 'https://www.gstatic.com/firebasejs/12.18.0/firebase-firestore.js';
+const firebaseConfig={apiKey:'AIzaSyDNvckr8JVpkV1HDB9-H7lNjFw_Pihoq6o',authDomain:'hydroponic-control-d996e.firebaseapp.com',projectId:'hydroponic-control-d996e',storageBucket:'hydroponic-control-d996e.firebasestorage.app',messagingSenderId:'294452457565',appId:'1:294452457565:web:bbe514cfad5942a22e5db4'};
+const app=initializeApp(firebaseConfig);const auth=getAuth(app);const db=getFirestore(app);window.FB={app,auth,db,onAuthStateChanged,signInWithEmailAndPassword,createUserWithEmailAndPassword,signOut,collection,doc,setDoc,deleteDoc,onSnapshot,getDoc,serverTimestamp};
